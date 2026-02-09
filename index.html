@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>融合象棋</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>中西融合棋</h1>
+      <p>一方使用中国象棋，另一方使用国际象棋，10×9 双阵对决。</p>
+    </div>
+    <div class="actions">
+      <button id="resetBtn" type="button">重新开始</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="board-panel">
+      <div id="board" class="board" aria-label="融合棋棋盘"></div>
+      <div class="status" id="status"></div>
+    </section>
+
+    <aside class="info">
+      <h2>规则摘要</h2>
+      <ul>
+        <li>上方（蓝色）使用国际象棋的棋子与走法；下方（红色）使用中国象棋的棋子与走法。</li>
+        <li>棋盘为 10 行 9 列，初始布局让两种棋子在同一棋盘开局。</li>
+        <li>吃掉对方的<strong>国王/将</strong>即获胜，当前轮到的阵营会高亮可以行走的落点。</li>
+        <li>国际象棋的兵仅向前一步，抵达底线自动升变为后；中国兵过河后可横向走一步。</li>
+        <li>不实现将军检测，仅要求按各自棋子的走法行棋。</li>
+      </ul>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
